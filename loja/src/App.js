@@ -11,34 +11,45 @@ import logo from './assets/logo.jpg';
 
 
 const listMotorcycle = [
-  {id:1, brand:"Honda", modelo:"Today 125", ano:1998, km:70000, image: today125Image},
-  {id:2, brand:"Honda", modelo:"Rd 125", ano:1989, km:126700, image: rd125Image},
-  {id:3, brand:"Honda", modelo:"Rd 135", ano:1995, km:20000, image: rd135Image},
-  {id:4, brand:"Honda", modelo:"CG 125", ano:2003, km:98000, image: cg125Image},
-  {id:5, brand:"Honda", modelo:"Twister 250", ano:2006, km:60000, image: tutu250Image},
-  {id:6, brand:"Honda", modelo:"CB 300", ano:2009, km:12000, image: cb300Image}
+  {id:1, brand:"Honda", modelo:"Today 125", preco:"6.000", ano:1998, km:"70.000", image: today125Image},
+  {id:2, brand:"Honda", modelo:"Rd 125", preco:"9.000", ano:1989, km:"126.700", image: rd125Image},
+  {id:3, brand:"Honda", modelo:"Rd 135", preco:"14.000", ano:1995, km:"20.000", image: rd135Image},
+  {id:4, brand:"Honda", modelo:"CG 125", preco:"6.900", ano:2003, km:"98.000", image: cg125Image},
+  {id:5, brand:"Honda", modelo:"Twister 250", preco:"14.500", ano:2006, km:"60.000", image: tutu250Image},
+  {id:6, brand:"Honda", modelo:"CB 300", preco:"10.300", ano:2009, km:"12.000", image: cb300Image},
+  {id:7, brand:"", modelo:"", preco:"", ano:"", km:"", image: ""},
+  {id:8, brand:"", modelo:"", preco:"", ano:"", km:"", image: ""},
+  {id:9, brand:"", modelo:"", preco:"", ano:"", km:"", image: ""},
+  {id:10, brand:"", modelo:"", preco:"", ano:"", km:"", image: ""},
+  {id:11, brand:"", modelo:"", preco:"", ano:"", km:"", image: ""},
+  {id:12, brand:"", modelo:"", preco:"", ano:"", km:"", image: ""}
 ]
+
+const filteredMotorcycles = listMotorcycle.filter(moto => moto && moto.brand);
 
 function App() {
   return (
     <body >
       <header className="App-header">
         <div className="logoImg">
-          <img src={logo} alt="" />
+          <img src={logo} alt="Logo da empresa" />
         </div>
         <h1>Menu e Opções</h1>
       </header>
 
       <div className="allCards">
-        {listMotorcycle.map((moto) => (
-          <Cards
-            key={moto.id}
-            brand={moto.brand}
-            modelo={moto.modelo}
-            ano={moto.ano}
-            km={moto.km}
-            image={moto.image}
-          />
+        {filteredMotorcycles.map((moto) => (
+          moto && (
+            <Cards
+              key={moto.id}
+              brand={moto.brand}
+              modelo={moto.modelo}
+              preco={moto.preco}
+              ano={moto.ano}
+              km={moto.km}
+              image={moto.image}
+            />
+          )
         ))}
       </div>
     </body>
