@@ -7,6 +7,7 @@ import rd135Image from './assets/rd-135.jpg';
 import cg125Image from './assets/cg-125.png';
 import tutu250Image from './assets/tutu-250.jpg';
 import cb300Image from './assets/cb-300.jpg';
+import logo from './assets/logo.jpg';
 
 
 const listMotorcycle = [
@@ -22,7 +23,10 @@ function App() {
   return (
     <body >
       <header className="App-header">
-        <h1>Logo, Menu e Opções</h1>
+        <div className="logoImg">
+          <img src={logo} alt="" />
+        </div>
+        <h1>Menu e Opções</h1>
       </header>
 
       <div className="allCards">
