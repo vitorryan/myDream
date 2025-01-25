@@ -20,7 +20,7 @@ body {
 }
 
 .allCards {
-  background-color: red;
+  background-color: #ffffff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 13px;
@@ -42,6 +42,11 @@ body {
   width: 250px;
   margin-left: 13px;
   margin-bottom: 10px;
+  text-align: center;
+  display: flex; /* Garante que a imagem fique dentro de um container flexível */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  overflow: hidden; /* Corta qualquer parte da imagem que ultrapasse a área */
 }
 
 .descriptionMotorcycle {
