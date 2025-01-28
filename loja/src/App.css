@@ -18,10 +18,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: center; */
   font-size: calc(10px + 1vmin);
   color: white;
 }
+
+
 
 .logoImg {
   padding: 10px;
@@ -37,7 +38,7 @@ body {
   background-color: #ffffff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 13px;
+  grid-gap: 12px;
   justify-items: center;
   padding-top: 10px;
 }
@@ -52,6 +53,7 @@ body {
 }
 
 .imgMotorcycle {
+  border-radius: 10px 10px 0px 0px;
   height: 150px;
   width: 280px;
   text-align: center;
@@ -102,5 +104,10 @@ body {
   display: flex;
   justify-content: space-between;
   margin-right: 10px;
+}
+
+.headerOptions {
+  display: flex;
+  gap: 10px;
 }
 

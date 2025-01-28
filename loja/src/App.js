@@ -1,5 +1,9 @@
 import './App.css';
 import Cards from './component/Cards';
+import SidebarWithDrawer from './component/SidebarWithDrawer';
+import Header from './component/Header'
+
+
 
 import today125Image from './assets/cg-125-today.jpg';
 import rd125Image from './assets/rd125.jpg';
@@ -7,7 +11,8 @@ import rd135Image from './assets/rd-135.jpg';
 import cg125Image from './assets/cg-125.png';
 import tutu250Image from './assets/tutu-250.jpg';
 import cb300Image from './assets/cb-300.jpg';
-import logo from './assets/logo.jpg';
+
+
 
 
 const listMotorcycle = [
@@ -31,10 +36,7 @@ function App() {
   return (
     <body >
       <header className="App-header">
-        <div className="logoImg">
-          <img src={logo} alt="Logo da empresa" />
-        </div>
-        <h1>Menu e Opções</h1>
+        <Header/>
       </header>
 
       <div className="allCards">
@@ -51,6 +53,11 @@ function App() {
             />
           )
         ))}
+      </div>
+
+      <div>
+        <SidebarWithDrawer/>
+        
       </div>
     </body>
   );
